@@ -1,0 +1,15 @@
+---
+application:
+  name: "ub"
+  project: "ub"
+  organization: "QoveryCommunity"
+databases:
+- type: "MONGODB"
+  name: "cluster0"
+  version: "4.4"
+routers:
+- name: "main-ub"
+  routes:
+  - application_name: "ub"
+    paths:
+    - "/*"
