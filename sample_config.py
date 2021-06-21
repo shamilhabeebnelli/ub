@@ -13,17 +13,17 @@ class Config(object):
 
     # MUST NEEDED VARS
     # set this value with your name
-    ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+    ALIVE_NAME = os.environ.get("ALIVE_NAME", "shamilnelli")
     # Get the values for following 2 from my.telegram.org
-    APP_ID = int(os.environ.get("APP_ID", 6))
-    API_HASH = os.environ.get("API_HASH") or None
+    APP_ID = int(os.environ.get("APP_ID", "2802538"))
+    API_HASH = os.environ.get("API_HASH", "7bc625df204180e82ef3992f33ec8f0a") or None
     # Datbase url heroku sets it automatically else get this from elephantsql
-    DB_URI = os.environ.get("DATABASE_URL", None)
+    DB_URI = os.environ.get("DATABASE_URL", "postgres://dvxzrkjq:usv_oY...@queenie.db.elephantsql.com:5432/dvxzrkjq")
     # Get this value by running python3 stringsetup.py or https://repl.it/@sandeep1709/generatestringsession
-    STRING_SESSION = os.environ.get("STRING_SESSION", None)
+    STRING_SESSION = os.environ.get("STRING_SESSION", "1BVtsOIoBux3XOqxdV_IFzcwoJstZv-3SJNR4qKPmSYiI7cZ1LBWJDqrK5RzePUuF0XASYnj7Z4Acjz8PRm2mHQh-xSuJtQDoZAFFYgBIIX3RGGv9UNzXrR7LxQUJ1w06-7Xf9sRWOZLlaYGY3mVxoLKZtWsZdqdnSjxqVkPUPGifL9f38bsadc2xKXCyYPo7nBYHF7himUlb7dIE4EBwDv4gMbA_SIzoNVLpKltz9y2vyyegZhGeDQu80CtQO-xkhlW9eHbiQZI6JWLaCXJPJoLiOEHoSeiKBE_XTEG4H7VwFje21IFZb_bYPPK2L9ny2PvSJ7sqSL5q0spvz0Ne5QRRQ_XZxkg=")
     # Telegram BOT Token and bot username from @BotFather
     TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN") or os.environ.get(
-        "TG_BOT_TOKEN_BF_HER", None
+        "TG_BOT_TOKEN_BF_HER", "1879305543:AAEGDzEWXH0_vX1qQ2jwW_cGvyi80pT7DqA"
     )
     TG_BOT_USERNAME = None
     # get this value from http://www.timezoneconverter.com/cgi-bin/findzone.tzc
@@ -37,21 +37,21 @@ class Config(object):
     # for profile default name
     AUTONAME = os.environ.get("AUTONAME", None)
     # Set this value with group id of private group(can be found this value by .id)
-    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID") or 0)
+    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID", "-1001159636584") or 0)
     # Set this value same as PRIVATE_GROUP_BOT_API_ID if you need pmgaurd
-    PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID") or 0)
+    PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID", "-1001159636584") or 0)
     # set this value with channel id of private channel use full for .frwd cmd
-    PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID") or 0)
+    PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID, "-1001238397134") or 0)
     # for heroku plugin you can get this value from https://dashboard.heroku.com/account
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     # set this with same app name you given for heroku
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     # Owner id to show profile link of given id as owner
-    OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
+    OWNER_ID = int(os.environ.get("OWNER_ID", "749673781") or 0)
     # set this with group id so it keeps notifying about your tagged messages or pms
     PM_LOGGER_GROUP_ID = int(
-        os.environ.get("PM_LOGGER_GROUP_ID")
-        or os.environ.get("PM_LOGGR_BOT_API_ID")
+        os.environ.get("PM_LOGGER_GROUP_ID", "-1001159636584")
+        or os.environ.get("PM_LOGGR_BOT_API_ID", "-1001159636584")
         or 0
     )
 
@@ -89,14 +89,14 @@ class Config(object):
     # is dual logging needed or not true or false
     DUAL_LOG = os.environ.get("DUAL_LOG", False)
     # progress bar progress
-    FINISHED_PROGRESS_STR = os.environ.get("FINISHED_PROGRESS_STR", "▰")
+    FINISHED_PROGRESS_STR = os.environ.get("FINISHED_PROGRESS_STR", "•")
     UNFINISHED_PROGRESS_STR = os.environ.get("UNFINISHED_PROGRESS_STR", "▱")
 
     # API VARS FOR USERBOT
     # Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture for screen shot
     SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
     # Get your own APPID from https://api.openweathermap.org/data/2.5/weather
-    OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
+    OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", "8f2c0f45b0e64f3a9eb068ce951a8e09")
     # This is required for the speech to text plugin. Get your USERNAME from
     # https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
     IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
@@ -106,7 +106,7 @@ class Config(object):
     # Genius lyrics get this value from https://genius.com/developers both has
     GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)
     # Get your own API key from https://www.remove.bg/
-    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
+    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "TugEHghRF3Httwnvj4VXqmxK")
     # Get this value from https://free.currencyconverterapi.com/
     CURRENCY_API = os.environ.get("CURRENCY_API", None)
     # Google Drive plugin https://telegra.ph/G-Drive-guide-for-catuserbot-01-01
@@ -116,7 +116,7 @@ class Config(object):
     G_DRIVE_DATA = os.environ.get("G_DRIVE_DATA", None)
     G_DRIVE_INDEX_LINK = os.environ.get("G_DRIVE_INDEX_LINK", None)
     # For transfer channel 2 step verification code of telegram
-    TG_2STEP_VERIFICATION_CODE = os.environ.get("TG_2STEP_VERIFICATION_CODE", None)
+    TG_2STEP_VERIFICATION_CODE = os.environ.get("TG_2STEP_VERIFICATION_CODE", " 123456")
     # JustWatch Country for watch plugin
     WATCH_COUNTRY = os.environ.get("WATCH_COUNTRY", "IN")
     # Last.fm plugin  https://telegra.ph/Guide-for-LASTFM-02-03
@@ -131,7 +131,7 @@ class Config(object):
     RANDOM_STUFF_API_KEY = os.environ.get("RANDOM_STUFF_API_KEY", None)
     # github vars
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
-    GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
+    GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", "github.com/shamilhabeebnelli/ub.git")
     # Deepai value can get from https://deepai.org/
     DEEP_AI = os.environ.get("DEEP_AI", None)
 
